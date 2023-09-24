@@ -12,21 +12,27 @@ RUN git clone https://github.com/ThisIsNotANamepng/HackingPractice.git
 
 RUN echo "alias python3=/venv/bin/python3" >> ~/.bashrc
 
+RUN echo "cd /root" >> ~/.bashrc
+
 RUN alias python3=/venv/bin/python3
 
-RUN mv /HackingPractice/offense/week_key_length /root
+RUN mv /HackingPractice/offense/weak_key_length /root
 
 RUN rm -r /HackingPractice
 
-RUN mv /root/weak_key_length/* ..
+RUN mv /root/weak_key_length/* /root
 
 RUN rm -r /root/weak_key_length
 
 RUN rm /root/Dockerfile
 
-RUN /venv/bin/python3 HackingPractice/encryptfile.py
+RUN /venv/bin/python3 /root/encryptfile.py
 
 RUN rm /root/encryptfile.py
+
+RUN rm /data.txt 
+
+RUN mv /data.txt.aes /root
 
 ENTRYPOINT /bin/bash
 
