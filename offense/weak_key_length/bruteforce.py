@@ -12,7 +12,6 @@ import sys
 from colorama import init
 from termcolor import colored
 
-password = "test"
 stop=False
 characters = string.ascii_letters + string.digits
 
