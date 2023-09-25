@@ -45,7 +45,7 @@ for length in range(1, 5): # If you try to load a list of letters any longer the
             print(colored("File decrypted!", "green"))
             print("The key was :", colored(s, "yellow"))
             f=open("dataout.txt", "r")
-            print("The data in the file is: ", colored(f.read(), "blue"))
+            print("The data in the file is: ", (f.read()))
             f.close()
             print("\n")
 
