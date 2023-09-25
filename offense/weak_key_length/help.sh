@@ -28,4 +28,4 @@ fi
 echo "----Answer----"
 echo "To complete this lab, you have to run:"
 echo "1. python3 bruteforce.py"
-echo "2. Wait a minute, it will find the password
+echo "2. Wait a minute, it will find the password"

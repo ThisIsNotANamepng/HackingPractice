@@ -6,7 +6,7 @@ NOCOLOR=$'\033[0m'
 echo "What is the password in$Blue data.txt? $NOCOLOR"
 
 read passAnswer
-if [[ "$passAnswer" == "super-long-password-you-could-never-guess-or-brute-force-1872486756^$%68756453$#%^$685764^#&$*632%#@^$#&867564%Wrv6e5]" ]]; then
+if [[ "$passAnswer" == "super*" ]]; then
   echo "$Green Correct!$NOCOLOR"
 else
     echo "$Red Incorrect$NOCOLOR"
